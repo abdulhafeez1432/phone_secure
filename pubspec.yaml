@@ -39,6 +39,13 @@ dependencies:
   rxdart: 0.22.2
   transparent_image: 1.0.0
   synchronized: ^3.0.0
+  font_awesome_flutter: ^9.2.0
+  scrollable_positioned_list: ^0.2.2
+  plugin_platform_interface: ^2.0.2
+
+  image_picker:
+  device_information: ^0.0.4
+  unique_identifier: ^0.2.2
 
 
 dev_dependencies:
@@ -77,6 +84,24 @@ flutter:
   assets:
     - assets/circle-loading-animation.gif
     - assets/icons/
+    - assets/imgs/onboarding-bg.png
+    - assets/imgs/android.png
+    - assets/imgs/ios.png
+    - assets/imgs/creative-tim.png
+    - assets/imgs/now-logo.png
+    - assets/imgs/register-bg.png
+    - assets/imgs/bg-profile.png
+    - assets/imgs/profile-img.jpg
+    - assets/imgs/album-1.jpg
+    - assets/imgs/album-2.jpg
+    - assets/imgs/album-3.jpg
+    - assets/imgs/album-4.jpg
+    - assets/imgs/album-5.jpg
+    - assets/imgs/album-6.jpg
+    - assets/imgs/onboarding-free.png
+    - assets/imgs/invision-white-slim.png
+    - assets/splash_new.jpg
+    - assets/welcome.jpg
 
   fonts:
     - family: Noticia Text
