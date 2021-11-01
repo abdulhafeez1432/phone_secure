@@ -75,28 +75,28 @@ class _DashBoardState extends State<DashBoard> {
 
   Padding _headerbuildPadding(String userName) {
     return Padding(
-            padding: const EdgeInsets.only(left:25.0, top: 20.0, right: 25.0),
-            child: Row(
-              children: <Widget>[
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text("Hi, ${userName}!", style: TextStyle(color: Colors.white70, fontSize: 30.0, fontWeight: FontWeight.bold),),
-                    Row(
-                      children: <Widget>[
-                        Text("WELCOME TO", style: TextStyle(color: Colors.white),),
-                        SizedBox(width: 5.0,),
-                        Text("SECURE NOW APP", style: TextStyle(color: Colors.red),),
-                        SizedBox(width: 5.0,),
+      padding: const EdgeInsets.only(left:25.0, top: 20.0, right: 25.0),
+      child: Row(
+        children: <Widget>[
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text("Hi, ${userName}!", style: TextStyle(color: Colors.white70, fontSize: 30.0, fontWeight: FontWeight.bold),),
+              Row(
+                children: <Widget>[
+                  Text("WELCOME TO", style: TextStyle(color: Colors.white),),
+                  SizedBox(width: 5.0,),
+                  Text("SECURE NOW APP", style: TextStyle(color: Colors.red),),
+                  SizedBox(width: 5.0,),
 
-                      ],
-                    ),
-                  ],
-                ),
+                ],
+              ),
+            ],
+          ),
 
-              ],
-            ),
-          );
+        ],
+      ),
+    );
   }
 
   FloatingActionButton _buildFloatingActionButton() {
@@ -141,44 +141,44 @@ class _DashBoardState extends State<DashBoard> {
 
                     child: ListView.builder(
 
-                        shrinkWrap: true,
-                        scrollDirection: Axis.vertical,
-                        itemCount: phoneDetails!.length.toInt(),
-                        itemBuilder: (context, index) {
-                          return phoneDetails! == null
-                              ? Container(
-                            child: Center(child: Text("No Data")),
-                          )
-                             : Container(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.vertical,
+                      itemCount: phoneDetails!.length.toInt(),
+                      itemBuilder: (context, index) {
+                        return phoneDetails! == null
+                            ? Container(
+                          child: Center(child: Text("No Data")),
+                        )
+                            : Container(
 
-                              child: ListTile(
-                              contentPadding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+                          child: ListTile(
+                            contentPadding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
                             leading: Container(
                               padding: EdgeInsets.only(right: 12.0),
                               decoration: new BoxDecoration(
                                   border: new Border(
                                       right: new BorderSide(width: 1.0, color: Colors.white24))),
                               child: Icon(Icons.autorenew, color: Colors.white),
-                                  ),  title: Text(
-                                phoneDetails![index].imei.toString(),
-                                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-                              ),
-                                subtitle: Row(
-                            children:[
-                              Icon(Icons.linear_scale, color: Colors.yellowAccent),
-                              Text(" Intermediate", style: TextStyle(color: Colors.white))
-                            ],
+                            ),  title: Text(
+                            phoneDetails![index].imei.toString(),
+                            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                          ),
+                            subtitle: Row(
+                              children:[
+                                Icon(Icons.linear_scale, color: Colors.yellowAccent),
+                                Text(" Intermediate", style: TextStyle(color: Colors.white))
+                              ],
                             ),
-                                trailing: Icon(Icons.keyboard_arrow_right, color: Colors.white, size: 30.0),
-                              onTap: (){onTapPhone(phoneDetails![index]);},),
+                            trailing: Icon(Icons.keyboard_arrow_right, color: Colors.white, size: 30.0),
+                            onTap: (){onTapPhone(phoneDetails![index]);},),
 
 
-                          );
-                        },),
+                        );
+                      },),
                   ),
                 ],
               ),
-              );
+            );
           }
 
           if (snapshot.hasError) {

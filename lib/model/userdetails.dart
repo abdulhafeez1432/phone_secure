@@ -14,23 +14,26 @@ class UserDetails {
         this.lastName,
         this.lastLogin});
 
-  UserDetails.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    username = json['username'];
-    email = json['email'];
-    firstName = json['first_name'];
-    lastName = json['last_name'];
-    lastLogin = json['last_login'];
+
+  factory UserDetails.fromJson(dynamic json){
+    return UserDetails(
+        id: json["id"],
+        email: json["email"],
+        username: json["username"],
+        firstName: json['firstName'],
+        lastName: json['lastName'],
+      lastLogin: json['lastLogin'],
+    );
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['username'] = this.username;
-    data['email'] = this.email;
-    data['first_name'] = this.firstName;
-    data['last_name'] = this.lastName;
-    data['last_login'] = this.lastLogin;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['email'] = email;
+    data['username'] = username;
+    data['firstName'] = firstName;
+    data['lastName'] = lastName;
+    data['lastLogin'] = lastLogin;
     return data;
   }
 }

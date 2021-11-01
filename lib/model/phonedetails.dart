@@ -1,3 +1,7 @@
+import 'dart:io';
+
+import 'package:image_picker/image_picker.dart';
+
 class PhoneDetail {
   int? id;
   Phone? phone;
@@ -116,3 +120,33 @@ class Store {
 }
 
 
+class AddPhoneNumberRequestModel {
+  final String phone;
+  final String color;
+  final String imei;
+  final String receipt;
+  final String meansOfId;
+
+  AddPhoneNumberRequestModel(
+      {required this.phone, required this.color, required this.imei, required this.receipt, required this.meansOfId});
+
+  factory AddPhoneNumberRequestModel.fromJson(Map<String, dynamic> json) {
+    return AddPhoneNumberRequestModel(
+          phone : json['phone'] as String,
+    color : json['color'] as String,
+    imei : json['imei'] as String,
+    receipt : json['receipt'] as String,
+    meansOfId : json['means_of_id'] as String
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['phone'] = this.phone;
+    data['color'] = this.color;
+    data['imei'] = this.imei;
+    data['receipt'] = this.receipt;
+    data['means_of_id'] = this.meansOfId;
+    return data;
+  }
+}

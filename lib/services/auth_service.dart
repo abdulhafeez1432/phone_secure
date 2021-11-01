@@ -33,6 +33,7 @@ class AuthService {
       String user = jsonEncode(loggedInUser);
 
       SPUtil.putString('user', user);
+     // SPUtil.putInt('loggedId', loggedInUser.id!);
       //print(user);
       return jsonDecode(response.body)['token'];
     } on LoginError {

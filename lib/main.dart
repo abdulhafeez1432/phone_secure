@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:phone_secure/pages/login/login.dart';
+import 'package:phone_secure/pages/login/onboard.dart';
 import 'package:phone_secure/pages/login/register.dart';
 
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       title: 'Phone Security App',
       theme: new ThemeData(primaryColor: Color.fromRGBO(58, 66, 86, 1.0)),
       //home: WelcomePage(),
-      home: LoginPage(),
+      home: Welcome(),
       //home: RegisterPage(),
     );
   }

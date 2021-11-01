@@ -39,7 +39,7 @@ class _LoginPageState extends State<LoginPage> {
         password: password!,
       );
       await SPUtil.getInstance();
-      print("adding token to sp ${token}");
+      print("adding token to sp ${token}"); 
       SPUtil.putString('token', token);
       SPUtil.putString('userName', username!);
 
@@ -75,7 +75,9 @@ class _LoginPageState extends State<LoginPage> {
       body: Stack(
         children: [
           Container(
+
             padding: EdgeInsets.only(top: 35.0, left: 20.0, right: 20.0),
+
             child: Stack(
               children: <Widget>[
                 Container(
